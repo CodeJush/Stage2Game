@@ -1,0 +1,29 @@
+class Ground{
+
+    constructor (x,y,width,height){
+var options= {
+ isStatic: 1
+
+}
+
+
+   this.body= Bodies.rectangle(x,y,width,height,options)
+   this.width=width;
+   this.height=height;
+
+   this.image=loadImage("images/house.png");
+   
+    World.add(world,this.body)
+
+}
+
+display(){
+var pos=this.body.position;
+rectMode(CENTER);
+//fill(230,130,100);
+imageMode(CENTER);
+
+image(this.image,pos.x,pos.y,this.width,this.height);
+
+}
+}
